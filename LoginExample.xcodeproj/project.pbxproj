@@ -156,6 +156,7 @@
 		9B766E3F1B2BA7B300121982 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Roundwall Software";
 				TargetAttributes = {
@@ -409,6 +410,7 @@
 				9B766E681B2BA7B300121982 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B766E691B2BA7B300121982 /* Build configuration list for PBXNativeTarget "LoginExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +419,7 @@
 				9B766E6B1B2BA7B300121982 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
