@@ -23,7 +23,13 @@ extension UIViewController {
 }
 
 class LoggedInViewController: UIViewController {
+    var gatewayViewController: GatewayViewController?
     var status: LoginStatus?
+
+    @IBAction func logout(sender: UIButton) {
+        gatewayViewController?.status = .LoggedOut
+    }
+
 }
 
 class LoggedOutViewController: UIViewController {
@@ -64,6 +70,7 @@ class GatewayViewController: UIViewController {
             map(controller, embedFullScreenController)
         case .LoggedIn(let apiKey):
             let controller = storyboard?.instantiateViewControllerWithIdentifier("loggedIn") as? LoggedInViewController
+            controller?.gatewayViewController = self
             controller?.status = self.status
             map(controller, embedFullScreenController)
         }
