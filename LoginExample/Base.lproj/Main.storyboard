@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E33b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -45,7 +45,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KnF-uD-M7C">
-                                <rect key="frame" x="256.5" y="270" width="86" height="60"/>
+                                <rect key="frame" x="257" y="270" width="86" height="60"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
@@ -87,8 +87,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10P-z8-wgP">
+                                <rect key="frame" x="240" y="270" width="120" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="LWE-E0-fLt"/>
+                                    <constraint firstAttribute="width" constant="120" id="SwP-M8-DrS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                <state key="normal" title="Logout!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="login" destination="rMO-cz-Lcf" eventType="touchUpInside" id="GCH-3U-yUV"/>
+                                    <action selector="logout:" destination="Hkk-SY-E56" eventType="touchUpInside" id="lyC-yo-tLA"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the app!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ic-fx-aKj">
-                                <rect key="frame" x="245" y="290" width="111" height="19.5"/>
+                                <rect key="frame" x="245" y="242" width="111" height="20"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -96,9 +114,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerY" secondItem="10P-z8-wgP" secondAttribute="centerY" id="3lh-vy-18T"/>
+                            <constraint firstAttribute="centerX" secondItem="3Ic-fx-aKj" secondAttribute="centerX" id="619-aM-DDi"/>
                             <constraint firstAttribute="centerX" secondItem="3Ic-fx-aKj" secondAttribute="centerX" constant="-0.5" id="B5I-14-hYC"/>
+                            <constraint firstAttribute="centerX" secondItem="10P-z8-wgP" secondAttribute="centerX" id="Lyg-2k-CUk"/>
                             <constraint firstAttribute="centerY" secondItem="3Ic-fx-aKj" secondAttribute="centerY" constant="0.5" id="gv3-8G-fc3"/>
+                            <constraint firstItem="10P-z8-wgP" firstAttribute="top" secondItem="3Ic-fx-aKj" secondAttribute="bottom" constant="8" id="xsU-7J-JNb"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="B5I-14-hYC"/>
+                                <exclude reference="gv3-8G-fc3"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZYo-CN-xVv" userLabel="First Responder" sceneMemberID="firstResponder"/>
